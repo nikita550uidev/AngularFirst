@@ -1,1 +1,12 @@
-<app-my-counter></app-my-counter>
+
+<nav>
+    <ul>
+        <li *ngFor="let category of categories">
+            <a [routerLink]="['/category', category.id]">{{ category.name }}</a>
+        </li>
+        <li>
+            <a routerLink="/admin">Admin</a>
+        </li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>
